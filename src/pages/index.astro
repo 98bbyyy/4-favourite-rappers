@@ -1,0 +1,45 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+const artists = [
+  {
+    name: 'Fredo Bang',
+    description: 'American rapper known for his distinct voice and energetic performances.',
+    image: '/assets/fredo-bang.jpg'
+  },
+  {
+    name: 'YoungBoy NBA',
+    description: 'Popular rapper with a large following and a gritty style.',
+    image: ''
+  },
+  {
+    name: 'Tupac',
+    description: 'Legendary rapper known for his impactful lyrics and social commentary.',
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYrlZrEYnJ0eWeziKqGKc8_IdUW380ukjvQA&s'
+  },
+  {
+    name: 'Chris Brown',
+    description: 'Versatile artist known for his singing, dancing, and high-energy performances.',
+    image: '/assets/chris-brown.jpg'
+  }
+];
+---
+
+<Layout title="Welcome to Astro.">
+<section class="py-12 bg-white">
+  <div class="container mx-auto px-4">
+    <h1 class="text-4xl font-bold text-center mb-12 text-gray-800">My Favorite Artists</h1>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      {artists.map((artist) => (
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+          <img src={artist.image} alt={artist.name} class="w-full h-48 object-cover" />
+          <div class="p-6">
+            <h2 class="text-2xl font-semibold mb-2 text-gray-700">{artist.name}</h2>
+            <p class="text-gray-600">{artist.description}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+</Layout>

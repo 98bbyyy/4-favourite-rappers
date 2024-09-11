@@ -1,26 +1,30 @@
 ---
-import Layout from '../../layouts/Layout.astro';
-import { artists } from '../../data/artists';
+import Layout from '../layouts/Layout.astro';
+const artistName = "About Fredo Bang";
+const artistDescription = "Fredo Bang, a prominent rapper from Baton Rouge, Louisiana, is known for his raw and energetic performances. His music, characterized by its gritty realism and emotional depth, reflects his experiences growing up in a tough environment. With hits like 'Oouuh' and 'Top,' Fredo Bang has established himself as a significant voice in the rap scene, collaborating with top artists and earning a dedicated fan base. His work often addresses themes of street life, resilience, and personal struggle, making him a standout artist in modern hip-hop.";
 
-const artist = artists.find(a => a.slug === 'fredo-bang');
+
+
+
 ---
 
-<Layout title={artist.name}>
+
+<Layout title={artistName}>
   <div class="bg-gray-900 text-white min-h-screen flex flex-col">
     <!-- Header -->
     <header class="bg-black bg-opacity-80 py-6">
       <div class="container mx-auto px-4 text-center">
-        <h1 class="text-4xl font-extrabold">{artist.name}</h1>
+        <h1 class="text-4xl font-extrabold">{artistName}</h1>
       </div>
     </header>
 
     <!-- Main Content -->
     <main class="flex-grow container mx-auto px-4 py-12">
       <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden">
-        <img src={`/assets/${artist.image}`} alt={artist.name} class="w-full h-96 object-cover" />
+        <img src="maxresdefault.jpg" alt={artistName} class="w-full h-96 object-cover" />
         <div class="p-6">
-          <h2 class="text-3xl font-bold mb-4">{artist.name}</h2>
-          <p class="text-gray-300 text-lg">{artist.description}</p>
+          <h2 class="text-3xl font-bold mb-4">{artistName}</h2>
+          <p class="text-gray-300 text-lg">{artistDescription}</p>
         </div>
       </div>
     </main>

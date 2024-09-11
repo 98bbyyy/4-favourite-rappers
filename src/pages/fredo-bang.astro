@@ -1,1 +1,36 @@
-<h1>t</h1>
+---
+import Layout from '../../layouts/Layout.astro';
+import { artists } from '../../data/artists';
+
+const artist = artists.find(a => a.slug === 'fredo-bang');
+---
+
+<Layout title={artist.name}>
+  <div class="bg-gray-900 text-white min-h-screen flex flex-col">
+    <!-- Header -->
+    <header class="bg-black bg-opacity-80 py-6">
+      <div class="container mx-auto px-4 text-center">
+        <h1 class="text-4xl font-extrabold">{artist.name}</h1>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow container mx-auto px-4 py-12">
+      <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden">
+        <img src={`/assets/${artist.image}`} alt={artist.name} class="w-full h-96 object-cover" />
+        <div class="p-6">
+          <h2 class="text-3xl font-bold mb-4">{artist.name}</h2>
+          <p class="text-gray-300 text-lg">{artist.description}</p>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black bg-opacity-80 text-white py-4">
+      <div class="container mx-auto px-4 text-center">
+        <p>&copy; 2024 Music Page. All rights reserved.</p>
+      </div>
+    </footer>
+  </div>
+</Layout>
+

@@ -1,40 +1,82 @@
 ---
 import Layout from '../layouts/Layout.astro';
+
 const artistName = "About Fredo Bang";
 const artistDescription = "Fredo Bang, a prominent rapper from Baton Rouge, Louisiana, is known for his raw and energetic performances. His music, characterized by its gritty realism and emotional depth, reflects his experiences growing up in a tough environment. With hits like 'Oouuh' and 'Top,' Fredo Bang has established himself as a significant voice in the rap scene, collaborating with top artists and earning a dedicated fan base. His work often addresses themes of street life, resilience, and personal struggle, making him a standout artist in modern hip-hop.";
-
-
-
-
 ---
-
 
 <Layout title={artistName}>
   <div class="bg-gray-900 text-white min-h-screen flex flex-col">
     <!-- Header -->
-    <header class="bg-black bg-opacity-80 py-6">
+    <header class="bg-black bg-opacity-80 py-8">
       <div class="container mx-auto px-4 text-center">
-        <h1 class="text-4xl font-extrabold">{artistName}</h1>
+        <h1 class="text-5xl font-extrabold text-yellow-400">{artistName}</h1>
+        <p class="text-lg text-gray-300 mt-2">Explore the life and music of Fredo Bang</p>
       </div>
     </header>
 
     <!-- Main Content -->
     <main class="flex-grow container mx-auto px-4 py-12">
-      <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden">
+      <div class="relative bg-gray-800 rounded-lg shadow-lg overflow-hidden">
+        <!-- Background Image with Overlay -->
         <img src="maxresdefault.jpg" alt={artistName} class="w-full h-96 object-cover" />
-        <div class="p-6">
-          <h2 class="text-3xl font-bold mb-4">{artistName}</h2>
+        <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent"></div>
+        <div class="relative p-6">
+          <!-- Content Overlay -->
+          <h2 class="text-4xl font-bold text-yellow-400 mb-4">{artistName}</h2>
           <p class="text-gray-300 text-lg">{artistDescription}</p>
         </div>
       </div>
-    </main>
+
+      <!-- Notable Achievements Section -->
+      <section class="mt-12 bg-gray-800 rounded-lg shadow-lg p-6">
+        <h3 class="text-3xl font-semibold mb-4 text-yellow-400">Notable Achievements</h3>
+        <ul class="list-disc list-inside text-gray-300">
+          <li>Top charting singles: "Oouuh," "Top"</li>
+          <li>Collaborated with artists like Lil Durk and YoungBoy Never Broke Again</li>
+          <li>Recognized for his impact on the modern rap scene</li>
+        </ul>
+      </section>
+
+     <!-- Featured Video Section -->
+<section class="mt-12 bg-gray-800 rounded-lg shadow-lg p-6">
+  <h3 class="text-3xl font-semibold mb-4 text-yellow-400">Featured Video</h3>
+  <iframe 
+    width="560" 
+    height="315" 
+    src="https://www.youtube.com/embed/LSdIUqWszpc" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen 
+    class="w-full rounded-lg shadow-lg">
+  </iframe>
+</section>
+
+      
+          
+      <section class="mt-12 bg-gray-800 rounded-lg shadow-lg p-6">
+        <h3 class="text-3xl font-semibold mb-4 text-yellow-400">Featured Video</h3>
+        <iframe 
+          width="560" 
+          height="315" 
+          src="https://www.youtube.com/watch?v=vkHoZj1uGdo" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          allowfullscreen 
+          class="w-full rounded-lg shadow-lg">
+        </iframe>
+      </section>
+      
+        </iframe>
+      </section>
+      
 
     <!-- Footer -->
     <footer class="bg-black bg-opacity-80 text-white py-4">
       <div class="container mx-auto px-4 text-center">
-        <p>&copy; 2024 Music Page. All rights reserved.</p>
+        <p class="mb-2">&copy; 2024 Music Page. All rights reserved.</p>
+        <a href="/" class="text-yellow-400 hover:underline">Back to Home</a>
       </div>
     </footer>
   </div>
 </Layout>
-

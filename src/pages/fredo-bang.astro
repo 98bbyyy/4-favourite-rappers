@@ -6,77 +6,85 @@ const artistDescription = "Fredo Bang, a prominent rapper from Baton Rouge, Loui
 ---
 
 <Layout title={artistName}>
-  <div class="bg-gray-900 text-white min-h-screen flex flex-col">
+  <div class="bg-gradient-to-br from-black to-white text-white min-h-screen flex flex-col">
     <!-- Header -->
-    <header class="bg-black bg-opacity-80 py-8">
+    <header class="bg-gradient-to-r from-black to-white py-10">
       <div class="container mx-auto px-4 text-center">
-        <h1 class="text-5xl font-extrabold text-yellow-400">{artistName}</h1>
-        <p class="text-lg text-gray-300 mt-2">Explore the life and music of Fredo Bang</p>
+        <h1 class="text-5xl font-extrabold">{artistName}</h1>
+        <p class="text-lg text-white mt-2">Explore the life and music of Fredo Bang</p>
       </div>
     </header>
 
     <!-- Main Content -->
-    <main class="flex-grow container mx-auto px-4 py-12">
-      <div class="relative bg-gray-800 rounded-lg shadow-lg overflow-hidden">
-        <!-- Background Image with Overlay -->
-        <img src="maxresdefault.jpg" alt={artistName} class="w-full h-96 object-cover" />
-        <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent"></div>
-        <div class="relative p-6">
-          <!-- Content Overlay -->
-          <h2 class="text-4xl font-bold text-yellow-400 mb-4">{artistName}</h2>
-          <p class="text-gray-300 text-lg">{artistDescription}</p>
+    <main class="flex-grow container mx-auto px-4 py-12 flex space-x-4">
+      <!-- Artist Info Section -->
+      <section class="bg-gradient-to-r from-black to-white rounded-lg shadow-lg w-1/3 p-6">
+        <div class="relative">
+          <img src="maxresdefault.jpg" alt={artistName} class="w-full h-48 object-cover rounded-lg" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+          <div class="relative p-4">
+            <h2 class="text-4xl font-bold mb-4">{artistName}</h2>
+            <p class="text-lg">{artistDescription}</p>
+          </div>
         </div>
-      </div>
+      </section>
 
       <!-- Notable Achievements Section -->
-      <section class="mt-12 bg-gray-800 rounded-lg shadow-lg p-6">
-        <h3 class="text-3xl font-semibold mb-4 text-yellow-400">Notable Achievements</h3>
-        <ul class="list-disc list-inside text-gray-300">
-          <li>Top charting singles: "Oouuh," "Top"</li>
-          <li>Collaborated with artists like Lil Durk and YoungBoy Never Broke Again</li>
-          <li>Recognized for his impact on the modern rap scene</li>
+      <section class="bg-gradient-to-r from-black to-white rounded-lg shadow-lg w-1/3 p-6">
+        <h3 class="text-3xl font-semibold mb-4">Notable Achievements</h3>
+        <ul class="list-disc list-inside space-y-2">
+          <li><strong>Top Charting Singles:</strong> "Oouuh," "Top," and "Murder Was the Case," with multiple tracks reaching Billboard charts.</li>
+          <li><strong>Collaborations:</strong> Worked with artists like Lil Durk, YoungBoy Never Broke Again, and Polo G, enhancing his profile in the industry.</li>
+          <li><strong>Albums:</strong> Released critically acclaimed albums such as "In the Name of Gee" and "Most Hated," showcasing his lyrical talent and storytelling ability.</li>
+          <li><strong>Music Awards:</strong> Nominated for various awards including the BET Hip Hop Awards and has won accolades from local music associations.</li>
+          <li><strong>Influential Presence:</strong> Known for addressing social issues and personal struggles in his music, resonating with fans and critics alike.</li>
+          <li><strong>Viral Hits:</strong> Several songs have gone viral on social media platforms, increasing his reach and fanbase significantly.</li>
         </ul>
       </section>
 
-     <!-- Featured Video Section -->
-<section class="mt-12 bg-gray-800 rounded-lg shadow-lg p-6">
-  <h3 class="text-3xl font-semibold mb-4 text-yellow-400">Featured Video</h3>
-  <iframe 
-    width="560" 
-    height="315" 
-    src="https://www.youtube.com/embed/LSdIUqWszpc" 
-    frameborder="0" 
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-    allowfullscreen 
-    class="w-full rounded-lg shadow-lg">
-  </iframe>
-</section>
+      <!-- Featured Videos Section -->
+      <section class="bg-gradient-to-r from-black to-white rounded-lg shadow-lg w-1/3 p-6">
+        <h3 class="text-3xl font-semibold mb-4">Featured Videos</h3>
+        <div class="space-y-4">
+          <iframe 
+            width="100%" 
+            height="200" 
+            src="https://www.youtube.com/embed/LSdIUqWszpc" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen 
+            class="w-full rounded-lg shadow-lg">
+          </iframe>
+          <iframe 
+            width="100%" 
+            height="200" 
+            src="https://www.youtube.com/embed/vkHoZj1uGdo" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen 
+            class="w-full rounded-lg shadow-lg">
+          </iframe>
+        </div>
+      </section>
+    </main>
 
-      
-          
-      <section class="mt-12 bg-gray-800 rounded-lg shadow-lg p-6">
-        <h3 class="text-3xl font-semibold mb-4 text-yellow-400">Featured Video</h3>
-        <iframe 
-          width="560" 
-          height="315" 
-          src="https://www.youtube.com/watch?v=vkHoZj1uGdo" 
-          frameborder="0" 
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-          allowfullscreen 
-          class="w-full rounded-lg shadow-lg">
-        </iframe>
-      </section>
-      
-        </iframe>
-      </section>
-      
+    <!-- Social Media Links Section -->
+    <section class="bg-gradient-to-r from-black to-white rounded-lg shadow-lg w-full p-6">
+      <h3 class="text-3xl font-semibold mb-4 text-center">Connect with Fredo Bang</h3>
+      <div class="flex justify-center space-x-4">
+        <a href="https://twitter.com/FredoBang" class="hover:underline">Twitter</a>
+        <a href="https://www.instagram.com/fredobang/" class="hover:underline">Instagram</a>
+        <a href="https://www.facebook.com/fredobangmusic" class="hover:underline">Facebook</a>
+      </div>
+    </section>
 
     <!-- Footer -->
-    <footer class="bg-black bg-opacity-80 text-white py-4">
+    <footer class="bg-black bg-opacity-70 text-white py-4">
       <div class="container mx-auto px-4 text-center">
         <p class="mb-2">&copy; 2024 Music Page. All rights reserved.</p>
-        <a href="/" class="text-yellow-400 hover:underline">Back to Home</a>
+        <a href="/" class="hover:underline">Back to Home</a>
       </div>
     </footer>
   </div>
 </Layout>
+

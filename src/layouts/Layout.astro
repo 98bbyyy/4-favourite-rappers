@@ -16,11 +16,12 @@ const { title } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body class="text-white bg-black h-32">
-  <a href="./">Home</a>
-  <slot />
-</body>
+	<body class="text-white bg-black h-full">
+		<a href="./" class="home-button">Home</a>
+		<slot />
+	</body>
 </html>
+
 <style is:global>
 	:root {
 		--accent: 136, 58, 234;
@@ -48,4 +49,24 @@ const { title } = Astro.props;
 			Courier New,
 			monospace;
 	}
+
+	.home-button {
+	display: inline-block;
+	padding: 10px 20px;
+	background: linear-gradient(to right, black, white);
+	color: black;
+	border-radius: 5px;
+	text-decoration: none;
+	font-weight: bold;
+	transition: background 0.3s, transform 0.3s;
+	margin: 20px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.home-button:hover {
+	background: linear-gradient(to right, white, black);
+	color: white;
+	transform: scale(1.05);
+}
+
 </style>
